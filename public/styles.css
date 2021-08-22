@@ -96,14 +96,17 @@ p {
 
 #button-return {
   margin: 5px 0 5px 0;
+  padding-left: 5px;
 }
  
 #button-return img {
   background-color: #181818;
-  height: 23px;
-  padding-left: 10px;
+  height: 22px;
 }  
 
+#button-search {
+  padding-left: 10px;
+}
 
 #error {
   text-align: center;
