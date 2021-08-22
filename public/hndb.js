@@ -14,11 +14,9 @@ input.addEventListener("keyup", function (event) {
 // SEARCH FOR MOVIE
 //***************************************************************************
 async function searchMovie() {
-  // empty sections
-  document.querySelector("#movie").innerHTML = "";
-  document.querySelector("#movies").innerHTML = "";
-  // reset error message
-  document.querySelector("#error").textContent = "";
+  clearMe();
+
+  if (document.querySelector("#searchMovie").value == "") return; // no value was entered to search so exit
 
   let searchMovie = JSON.stringify({
     searchMovie: document.querySelector("#searchMovie").value
@@ -43,8 +41,7 @@ async function searchMovie() {
 // GET MOVIE
 //***************************************************************************
 async function getMovie(movieID) {
-  document.querySelector("#movie").innerHTML = "";
-  document.querySelector("#movies").innerHTML = "";
+  clearMe();
 
   let getMovie = JSON.stringify({
     movieID: movieID,
@@ -115,8 +112,7 @@ async function getMovie(movieID) {
 //***************************************************************************
 function displayMovies() {
 
-  document.querySelector("#movie").innerHTML = "";
-  document.querySelector("#movies").innerHTML = "";
+  clearMe();
   document.querySelector("#button-return").hidden = true;
   
   for (let cnt = 0; cnt < globalSearchData.length; cnt++) {
@@ -147,4 +143,17 @@ async function postData(callAPI, data) {
   }).then((response) => response.json());
 
   return response;
+}
+
+//***************************************************************************
+// Function to clear sections
+//***************************************************************************
+function clearMe()
+{
+  // empty sections
+  document.querySelector("#movie").innerHTML = "";
+  document.querySelector("#movies").innerHTML = "";
+  // reset error message
+  document.querySelector("#error").textContent = "";
+
 }
