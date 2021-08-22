@@ -1,0 +1,172 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: black;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  margin-bottom: 100px;
+}
+
+main {
+  background-color: #dddddd;
+  box-shadow: 0 0 20px black;
+}
+
+nav {
+  background-color: #181818;
+  overflow: hidden;
+  font-size: 20px;
+  color: ivory;
+}
+
+h2 {
+  color: ivory;
+}
+
+input {
+  font-size: 20px;
+  color: #181818;
+  background-color: ivory;
+  border: 1px solid ivory;
+  border-radius: 5px;
+  width: 25%;
+  margin-top: 30px;
+  padding-left: 10px;
+  margin-left: -120px;
+}
+
+button {
+  border: solid 1px #181818;
+  background-color: #181818;
+  border-radius: 5px;
+}
+
+button img{
+  height: 20px;
+  background-color: #181818;
+}
+
+section {
+  margin: 10px 10px 10px 10px;
+  border-radius: 10px;
+  border: 1px #181818 solid;
+  background-color: #181818;
+}
+
+p {
+  margin-top: -10px;
+  color: #dddddd;
+  font-family: "Montserrat", sans-serif;
+  padding: 5px;
+  margin: 0 auto;
+  width: 60%;
+}
+
+.logo {
+  height: 80px;
+  float: left;
+  margin-left: 30px;
+}
+
+#movies {
+  padding-top: 10px;
+  display: grid;
+  grid-template-columns: 100%;
+  margin: 0px 5% 0px 5%;
+}
+
+#movies img {
+  margin: 20px;
+  width: 50%;
+  box-shadow: 0 0 15px black;
+}
+
+#movie {
+  margin: 0px 20% 0px 20%;
+}
+
+#movie img {
+  width: 25%;
+  box-shadow: 0 0 15px black;
+  margin-top: 20px;
+}
+
+#button-return {
+  margin: 5px 0 5px 0;
+}
+ 
+#button-return img {
+  background-color: #181818;
+  height: 23px;
+  padding-left: 10px;
+}  
+
+
+#error {
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 25px;
+  font-size: 22px;
+  color: white;
+  background-color: crimson;
+  width: 35%;
+  border-radius: 5px;
+}
+
+/* Mobile Responsive */
+@media only screen and (max-width: 32.4em) {
+* {
+  background-color: black;
+}
+
+h1,
+h2 {
+  background-color: #181818;
+}
+
+.logo {
+  height: 55px;
+  background-color: #181818;
+  float: left;
+  padding-top: 15px;
+  padding-right: 70px;
+}
+
+input {
+  width: 40%;
+  margin-bottom: 25px;
+}
+
+p {
+  background-color: #181818;
+  padding: 8px;
+  margin: 0 auto;
+}
+
+#movie {
+  margin-right: 25px;
+  margin-left: 25px;
+}
+
+#movie img{
+  height: 290px;
+  width: 190px;
+}
+
+}
+
+/* Desktop Responsive */
+@media only screen and (min-width: 32.5em) {
+  #movies {
+    grid-template-columns: 50% 50%;
+  }
+}
+
+@media only screen and (min-width: 64em) {
+  #movies {
+    grid-template-columns: 33.33% 33.33% 33.33%;
+  }
+}
