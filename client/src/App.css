@@ -1,0 +1,169 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: black;
+  color: ivory;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+}
+
+/* Desktop */
+@media only screen and (min-width: 32.5em) {
+  .movies {
+    grid-template-columns: 50% 50%;
+  }
+}
+
+@media only screen and (min-width: 64em) {
+  .movies {
+    grid-template-columns: 33.33% 33.33% 33.33%;
+  }
+}
+
+/* Mobile */
+@media only screen and (max-width: 32.4em) {
+  
+  /* Home Page */
+
+  .searchPage {
+    height: 80px;
+  }
+
+  .logo {
+    width: 100px;
+    float: left;
+    margin-left: 10px;
+    margin-top: 10px;
+  }
+
+  .login {
+    float: right;
+    margin-top: 25px;
+    margin-right: 10px;
+  }
+
+  .search {
+    margin-top: 25px;
+  }
+
+  input {
+    margin-left: 20px;
+    width: 40%;
+  }
+
+  /* Popup's */
+
+  .box {
+    width: 80%;
+  }
+
+  .content input {
+    width: 80%;
+    margin-right: 25px;
+  }
+
+  .buttons button {
+    width: 125px;
+    margin: 10px;
+    padding-right: 20px;
+  }
+
+  .close-icon {
+    right: 3%;
+    text-align: center;
+  }
+
+  /* Review Page */
+
+  .reviews-admin {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  /*Movies Page*/
+
+  .logo-alt {
+    width:100px;
+  }
+
+
+  .button button {
+    margin-top: 15px;
+    width: 125px;
+    height: 50px;
+  }
+
+  .movies {
+    display: grid;
+    grid-template-columns: 100%;
+  }
+  
+
+  /* Movie Page*/
+
+  .movie p {
+    background-color: #181818;
+    padding: 10px;
+    margin: 0 auto;
+    width: 90%;
+  }
+
+  .movie {
+    margin-right: 25px;
+    margin-left: 25px;
+    margin: 0 auto;
+    width: 80%;
+    display: flex;
+  }
+
+  .movie img {
+    height: 290px;
+    width: 190px;
+  }
+
+  .Movie button {
+    width:110px;
+    margin-right: 5px;
+    margin-top: 10px;
+  }
+
+  .Movie {
+    padding-right: 44px;
+  }
+
+  .Movie button img{
+    width:32px;
+  }
+
+  h2 {
+    padding: 10px 0 20px 0;
+  }
+
+  .reviews span {
+    font-size: 16px
+  } 
+
+  .reviews section {
+    width: 70%;
+    font-size: 16px
+  }
+
+  .reviews p {
+    width: 90%;
+    font-size: 16px;
+  }
+
+  .reviewButton button {
+    width: 125px;
+    margin-bottom: 20px;
+  }
+
+  textarea {
+    width: 80%;
+    margin-bottom: 10px;
+    font-size: 20px;
+  }
+}
