@@ -112,7 +112,7 @@ export default function GetMovie() {
                     <br></br>
                     <div
                       // slider
-                      class="slidecontainer"
+                      className="slidecontainer"
                       onChange={(e) => {
                         setRatingNumber(e.target.value);
                       }}
@@ -124,36 +124,22 @@ export default function GetMovie() {
                         max="10"
                         step="1"
                         value={ratingNumber}
-                        class="slider"
+                        className="slider"
                       />
                       <br></br>
                       <label>Rating: {ratingNumber}</label>
                     </div>
                     <div>
                       {/* Comment */}{" "}
-                      <textarea
-                        placeholder="Comment"
-                        onChange={(e) => {
-                          setRatingComment(e.target.value);
-                        }}
-                      />
+                      <textarea placeholder="Comment" onChange={(e) => {setRatingComment(e.target.value) }}/>
                     </div>
                   </div>
-
-                  <button
-                    className="borderme"
-                    disabled={!ratingUser || !ratingComment}
-                    onClick={SubmitReview}
-                  >
-                    Submit
-                  </button>
-                  <button
-                    onClick={() => {
-                      togglePopup();
-                    }}
-                  >
-                    Cancel
-                  </button>
+                  <div className="pop-button">
+                    <button disabled={!ratingUser || !ratingComment} onClick={SubmitReview}>Submit</button>
+                  {/* </div>
+                  <div className="pop-button"> */}
+                    <button onClick={() => {togglePopup(); }}>Cancel</button>
+                  </div>
                 </div>
               }
               handleClose={togglePopup}

@@ -38,3 +38,9 @@ input {
 .searchPage  button img {
   height: 25px;
 }
+
+.authMessage {
+  font-size: 18px;
+  color: red;
+  margin: 15px 0;
+}

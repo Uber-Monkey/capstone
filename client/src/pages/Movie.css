@@ -85,5 +85,9 @@ textarea {
 }
 
 .button button {
-  margin: 20px
+  margin: 20px 20px 5px 0;
+}
+
+.Movie {
+  margin-right: 105px;
 }

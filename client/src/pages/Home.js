@@ -8,22 +8,27 @@ import "./Home.css"
 export default function Home() {
   const [input, setInput] = useState(myvars.searchValue);
   const [isOpen, setIsOpen] = useState(false);
+  const [isDisplayed, setIsDisplayed] = useState(false);
   const [user, setUser] = useState("");
   const [pass, setPass] = useState("");
-
   const history = useHistory();
 
   const togglePopup = () => {
     setIsOpen(!isOpen);
     setUser("");
     setPass("");
+    setIsDisplayed(false);
   };
 
   const SubmitCredentials = () => {
     AuthUser(user, pass).then((response) => {
-      togglePopup();
       if (response) {
+        togglePopup();
         history.push("/review");
+      } else
+      {
+        // show invalid user or password message
+        setIsDisplayed(true);
       }
     });
   };
@@ -91,9 +96,10 @@ export default function Home() {
                       />
                     </div>{" "}
                   </div>
+                  {isDisplayed &&(<p className="authMessage">Invalid user or password.</p>)}
                   <div className="buttons">
                     <button
-                      className="borderme"
+                      // className="borderme"
                       disabled={!user || !pass}
                       onClick={SubmitCredentials}
                     >

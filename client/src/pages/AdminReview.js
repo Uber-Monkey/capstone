@@ -22,9 +22,9 @@ export default function AdminReview() {
     let content = [];
     if (data !== null) {
       if (data.Response === "False") {
-        content.push(<div className="error">{data.Error}</div>);
+        content.push(<div key="98" className="error">{data.Error}</div>);
       } else if (data === "") {
-        content.push(<div className="message">No reviews for approval.</div>);
+        content.push(<div key="99" className="message">No reviews for approval.</div>);
       } else {
         for (let item of data) {
           content.push(

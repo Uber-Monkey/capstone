@@ -167,3 +167,120 @@ body {
     font-size: 20px;
   }
 }
+
+/* Small Device's */
+@media only screen and (max-width: 600px) {
+  
+  /* Home Page */
+  .searchPage {
+    height: 100px;
+  }
+  
+  .logo {
+    width: 0px;
+  }
+  
+  .login {
+    float: right;
+    margin-top: 30px;
+    margin-right: 10px;
+  }
+
+
+  .search {
+    margin-top: 30px;
+  }
+
+  input {
+    margin-left: 10px;
+    width: 60%;
+  }
+
+  /* Pop Up */
+  .content input {
+    width: 80%;
+    margin-right: 15px;
+  }
+
+  .buttons button {
+    margin: 0;
+    width: 0px;
+    height: 50px;
+    font-size: 16px;
+    padding-right: 80px;
+    padding-left: 0;
+    margin-right: 6px;
+  }
+
+  .buttons {
+    margin-right:10px;
+    text-align: center;
+    width: 100%;
+  }
+
+  /* Review Page */
+  .buttons button {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-left: 40px;
+  }
+
+  /*Movies Page*/
+
+  .logo-alt {
+    width:0px;
+  }
+
+
+  .button button {
+    margin-top: 15px;
+    width: 125px;
+    height: 50px;
+    margin-left: 95px;
+  }
+
+  /* Movie Page*/
+  .Movie button {
+    width: 85px;
+    margin: 0 auto;
+    margin-top: 10px;
+    height: 50px;
+    margin-right: 5px;
+  }
+
+  .Movie {
+    width: 200px;
+    padding-left: 60px;
+  }
+
+  /* Reviews */
+
+  .reviewButton button {
+    width: 125px;
+    margin-bottom: 20px;
+  }
+
+  .reviewButton {
+    padding-right: 225px;
+  }
+
+  label,
+  .slider {
+      margin-left: 10px ;
+      height: 25px;
+  }
+
+  label {
+    padding-right: 20px;
+  }
+  .pop-button button {
+    margin: 0;
+    width: 85px;
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+
+}
+
+
+
