@@ -2,7 +2,6 @@ import React from "react"
 import { useHistory, Link } from "react-router-dom"
 import { GetMovieInfo } from "../ExpressAPI.js"
 import myvars from "../global.js"
-import "./Movies.css"
 
 export default function SearchMovies() {
   const history = useHistory();
@@ -39,17 +38,13 @@ export default function SearchMovies() {
   };
 
   return (
-    <div className="moviesPage">
-      <img src="Logo.png" alt="sslogo" className="logo-alt" />
-      <div className="button">
-        <div className="Movies">
+    <div>
+      <img src="Logo.png" alt="sslogo" className="logo logo-dark" />
         <Link to="/">
-          <button title="Search Page">
+          <button className="button-medium" title="Search Page">
             <img src="home.png" alt="Home page button" />
           </button>
         </Link>
-        </div>
-      </div>
       <div className="movies">{getMovies(data)}</div>
     </div>
   );

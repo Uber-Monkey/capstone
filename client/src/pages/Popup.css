@@ -15,37 +15,17 @@
   overflow: auto;
   height: auto;
   max-height: 70vh;
-  width: 50%;
+  width: 70%;
   margin: 0 auto;
   margin-top: calc(100vh - 85vh - 20px);
   padding: 20px;
-}
-
-.content input{
-  width: 35%;
-  padding-left: 0;
-  text-align: center;
-  margin-bottom: 5px;
-  border: 1px solid ivory;
-}
-
-.buttons button { 
-  font-size: 20px;
-  border: solid 1px #181818;
-  background-color: #181818;
-  border-radius: 5px;
-  color: ivory;
-  width: 150px;
-  height: 50px;
-  text-align: center;
-  margin: 10px;
 }
 
 .close-icon {
   content: "x";
   cursor: pointer;
   position: fixed;
-  right: 23.5%;
+  right:13.5%;
   top: calc(100vh - 85vh - 33px);
   background: #181818;
   width: 25px;
@@ -55,4 +35,15 @@
   text-align: center;
   border: 1px solid #f7941d;
   font-size: 20px;
+}
+
+@media only screen and (min-width: 32.5em) {
+
+  .box {
+    width: 40%;
+  }
+
+  .close-icon {
+    right: 29.5%;
+  }
 }

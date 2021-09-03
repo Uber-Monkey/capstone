@@ -1,9 +1,9 @@
-import React, { useState } from "react"
-import { useHistory } from "react-router-dom"
-import { AuthUser } from "../ExpressAPI.js"
-import Popup from "./Popup"
-import myvars from "../global.js"
-import "./Home.css"
+import React, { useState } from "react";
+import { useHistory } from "react-router-dom";
+import { AuthUser } from "../ExpressAPI.js";
+import Popup from "./Popup";
+import myvars from "../global.js";
+// import "./Home.css"
 
 export default function Home() {
   const [input, setInput] = useState(myvars.searchValue);
@@ -25,8 +25,7 @@ export default function Home() {
       if (response) {
         togglePopup();
         history.push("/review");
-      } else
-      {
+      } else {
         // show invalid user or password message
         setIsDisplayed(true);
       }
@@ -49,77 +48,69 @@ export default function Home() {
 
   return (
     <div className="searchPage">
-      <div className="login">
-        <button onClick={togglePopup}>
-          <img src="enter.png" alt="admin login" title="Admin Page" />
-        </button>
-      </div>
-      <div>
-        <img src="Logo.png" alt="sslogo" className="logo" />
-      </div>
-      <div className="search">
+      <img src="Logo.png" alt="sslogo" className="logo" />
+      <nav>
         <input
+          className="input-search"
           placeholder="Search Database"
           value={input}
           onChange={(e) => {
             setInput(e.target.value);
           }}
         />
-        <button onClick={doSearch}>
+        <button className="button-small button-eyeglass" onClick={doSearch}>
           <img src="search.png" alt="search eyeglass" title="Search" />
         </button>
-        <div>
-          {isOpen && (
-            <Popup
-              content={
+        <button className="button-small button-login" onClick={togglePopup}>
+          <img src="enter.png" alt="admin login" title="Admin Page" />
+        </button>
+        {isOpen && (
+          <Popup
+            content={
+              <div>
                 <div>
                   <div>
-                    <div>
-                      {/* User: */}
-                      {" "}
-                      <input
-                        placeholder="Username"
-                        onChange={(e) => {
-                          setUser(e.target.value);
-                        }}
-                      />
-                    </div>
-                    <div>
-                      {/* Password: */}
-                      {" "}
-                      <input
-                      placeholder="Password"
-                        type="password"
-                        onChange={(e) => {
-                          setPass(e.target.value);
-                        }}
-                      />
-                    </div>{" "}
-                  </div>
-                  {isDisplayed &&(<p className="authMessage">Invalid user or password.</p>)}
-                  <div className="buttons">
-                    <button
-                      // className="borderme"
-                      disabled={!user || !pass}
-                      onClick={SubmitCredentials}
-                    >
-                      Submit
-                    </button>
-                    <button
-                      onClick={() => {
-                        togglePopup();
+                    {/* User:{" "} */}
+                    <input
+                      placeholder="Username"
+                      onChange={(e) => {
+                        setUser(e.target.value);
                       }}
-                    >
-                      Cancel
-                    </button>
+                    />
+                  </div>
+                  <div>
+                    {/* Password:{" "} */}
+                    <input
+                      placeholder="Password"
+                      type="password"
+                      onChange={(e) => {
+                        setPass(e.target.value);
+                      }}
+                    />
                   </div>
                 </div>
-              }
-              handleClose={togglePopup}
-            />
-          )}
-        </div>
-      </div>
+                {isDisplayed && (
+                  <p className="authMessage">Invalid user or password.</p>
+                )}
+                <div className="buttons">
+                  <button disabled={!user || !pass} onClick={SubmitCredentials}>
+                    Submit
+                  </button>
+                  &nbsp;&nbsp;&nbsp;
+                  <button
+                    onClick={() => {
+                      togglePopup();
+                    }}
+                  >
+                    Cancel
+                  </button>
+                </div>
+              </div>
+            }
+            handleClose={togglePopup}
+          />
+        )}
+      </nav>
     </div>
   );
 }

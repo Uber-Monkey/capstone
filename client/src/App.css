@@ -1,286 +1,261 @@
 * {
   padding: 0;
   margin: 0;
+  background-color: black;
 }
 
 body {
-  background-color: black;
   color: ivory;
   text-align: center;
   font-family: "Montserrat", sans-serif;
+  margin-bottom: 25px;
 }
 
-/* Desktop */
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.searchPage,
+.movie-title,
+nav,
+p,
+.logo,
+button > *,
+.content button {
+  background-color: #181818;
+}
+
+.logo {
+  visibility: none;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 0px;
+}
+
+.logo-dark {
+  background-color: black;
+}
+
+nav {
+  padding: 20px 0;
+}
+
+input {
+  vertical-align: middle;
+  background-color: ivory;
+  border: 1px solid ivory;
+  border-radius: 5px;
+  height: 25px;
+  font-size: 25px;
+}
+
+.input-search {
+  width: 65%;
+}
+
+button {
+  border: 1px solid #181818;
+  border-radius: 5px;
+  vertical-align: middle;
+}
+
+.button-small {
+  border-radius: 5px;
+  width: 25px;
+  height: 25px;
+}
+
+.button-medium {
+  background-color: #181818;
+  margin-top: 25px;
+  width: 150px;
+  height: 50px;
+  font-size: 20px;
+  color: ivory;
+}
+
+.button-login {
+  float: right;
+  margin-right: 10px;
+}
+
+.button-eyeglass {
+  margin-left: 10px;
+}
+
+.content {
+  font-size: 20px;
+}
+
+.content input {
+  width: 90%;
+  margin: 10px 0;
+  text-align: center;
+}
+
+.content button {
+  font-size: 20px;
+  height: 45px;
+  width: 130px;
+  border-radius: 5px;
+  color: ivory;
+  margin-top: 15px;
+}
+
+.content p {
+  color: red;
+  background-color:  black;
+}
+
+section {
+  margin: 10px 10px 10px 10px;
+  border-radius: 10px;
+  border: 1px #181818 solid;
+  background-color: #181818;
+}
+
+.movies {
+  padding-top: 10px;
+  display: grid;
+  grid-template-columns: 100%;
+  margin: 0px 5%;
+}
+
+.movies img {
+  width: 70%;
+  margin: 15px 0;
+  box-shadow: 0 0 30px black;
+}
+
+.movie {
+  padding-top: 15px;
+  margin: 0 auto;
+  width: 80%;
+}
+
+.movie img {
+  box-shadow: 0 0 30px black;
+}
+
+.movie > section {
+  padding: 20px 0;
+}
+
+.movie-title {
+  padding: 15px 0;
+}
+
+.move-details {
+  padding: 15px 20px 0 20px;
+}
+
+.reviews {
+  margin: 0 auto;
+  width: 80%;
+}
+
+.reviews p {
+  padding: 15px 20px 0 20px;
+}
+
+.review-header {
+  padding-top: 15px;
+}
+
+.review-comment {
+  margin-bottom: 15px;
+}
+
+.slidecontainer {
+  margin: -20px 0 10px 0;
+}
+
+textarea {
+  width: 90%;
+  height: 200px;
+  margin: 10px 0;
+  font-size: 20px;
+  background-color: ivory;
+}
+
+.reviews-admin {
+  margin: 0 auto;
+  width: 80%;
+  margin-top: 20px;
+
+}
+
+.reviews-admin p {
+  border-radius: 5px;
+  padding: 15px 20px;
+}
+
+.reviews-admin section {
+  border: 1px solid #f7941d;
+  border-radius: 5px;
+}
+
+.buttons-icons img {
+  height: 40px;
+  width: 40px;
+  background-color: black;
+} 
+
+.buttons-icons button {
+  border: 0;
+}
+
+.slider {
+    background-color: #2f2f2f;
+    appearance: none;
+    height: 30px;
+    color: ivory;
+    vertical-align: middle;
+    overflow: hidden;
+}
+
+
 @media only screen and (min-width: 32.5em) {
+  .logo {
+    visibility: visible;
+    width: 100px;
+  }
+
   .movies {
     grid-template-columns: 50% 50%;
   }
 }
 
 @media only screen and (min-width: 64em) {
+  .input-search {
+    width: 30%;
+  }
+
+  .input-search {
+    padding-left: 10px;
+  }
+  
+
   .movies {
     grid-template-columns: 33.33% 33.33% 33.33%;
   }
 }
 
-/* Mobile */
-@media only screen and (max-width: 32.4em) {
-  
-  /* Home Page */
-
-  .searchPage {
-    height: 80px;
-  }
-
-  .logo {
-    width: 100px;
-    float: left;
-    margin-left: 10px;
-    margin-top: 10px;
-  }
-
-  .login {
-    float: right;
-    margin-top: 25px;
-    margin-right: 10px;
-  }
-
-  .search {
-    margin-top: 25px;
-  }
-
-  input {
-    margin-left: 20px;
-    width: 40%;
-  }
-
-  /* Popup's */
-
-  .box {
-    width: 80%;
-  }
-
-  .content input {
-    width: 80%;
-    margin-right: 25px;
-  }
-
+@media only screen and (max-width: 24em) {
   .buttons button {
-    width: 125px;
-    margin: 10px;
-    padding-right: 20px;
+    width: 45%;
+    height: 80%;
   }
 
-  .close-icon {
-    right: 3%;
-    text-align: center;
+  .movie > section {
+    padding: 20px 20px ;
   }
 
-  /* Review Page */
-
-  .reviews-admin {
-    width: 90%;
-    margin: 0 auto;
-  }
-
-  /*Movies Page*/
-
-  .logo-alt {
-    width:100px;
-  }
-
-
-  .button button {
-    margin-top: 15px;
-    width: 125px;
-    height: 50px;
-  }
-
-  .movies {
-    display: grid;
-    grid-template-columns: 100%;
-  }
-  
-
-  /* Movie Page*/
-
-  .movie p {
-    background-color: #181818;
-    padding: 10px;
-    margin: 0 auto;
-    width: 90%;
-  }
-
-  .movie {
-    margin-right: 25px;
-    margin-left: 25px;
-    margin: 0 auto;
-    width: 80%;
-    display: flex;
-  }
-
-  .movie img {
-    height: 290px;
-    width: 190px;
-  }
-
-  .Movie button {
-    width:110px;
-    margin-right: 5px;
+  .content button {
+    font-size: 18px;
+    height: 35px;
     margin-top: 10px;
-  }
-
-  .Movie {
-    padding-right: 44px;
-  }
-
-  .Movie button img{
-    width:32px;
-  }
-
-  h2 {
-    padding: 10px 0 20px 0;
-  }
-
-  .reviews span {
-    font-size: 16px
-  } 
-
-  .reviews section {
-    width: 70%;
-    font-size: 16px
-  }
-
-  .reviews p {
-    width: 90%;
-    font-size: 16px;
-  }
-
-  .reviewButton button {
-    width: 125px;
-    margin-bottom: 20px;
-  }
-
-  textarea {
-    width: 80%;
-    margin-bottom: 10px;
-    font-size: 20px;
   }
 }
-
-/* Small Device's */
-@media only screen and (max-width: 600px) {
-  
-  /* Home Page */
-  .searchPage {
-    height: 100px;
-  }
-  
-  .logo {
-    width: 0px;
-  }
-  
-  .login {
-    float: right;
-    margin-top: 30px;
-    margin-right: 10px;
-  }
-
-
-  .search {
-    margin-top: 30px;
-  }
-
-  input {
-    margin-left: 10px;
-    width: 60%;
-  }
-
-  /* Pop Up */
-  .content input {
-    width: 80%;
-    margin-right: 15px;
-  }
-
-  .buttons button {
-    margin: 0;
-    width: 0px;
-    height: 50px;
-    font-size: 16px;
-    padding-right: 80px;
-    padding-left: 0;
-    margin-right: 6px;
-  }
-
-  .buttons {
-    margin-right:10px;
-    text-align: center;
-    width: 100%;
-  }
-
-  /* Review Page */
-  .buttons button {
-    margin-top: 10px;
-    margin-bottom: 10px;
-    padding-left: 40px;
-  }
-
-  /*Movies Page*/
-
-  .logo-alt {
-    width:0px;
-  }
-
-
-  .button button {
-    margin-top: 15px;
-    width: 125px;
-    height: 50px;
-    margin-left: 95px;
-  }
-
-  /* Movie Page*/
-  .Movie button {
-    width: 85px;
-    margin: 0 auto;
-    margin-top: 10px;
-    height: 50px;
-    margin-right: 5px;
-  }
-
-  .Movie {
-    width: 200px;
-    padding-left: 60px;
-  }
-
-  /* Reviews */
-
-  .reviewButton button {
-    width: 125px;
-    margin-bottom: 20px;
-  }
-
-  .reviewButton {
-    padding-right: 225px;
-  }
-
-  label,
-  .slider {
-      margin-left: 10px ;
-      height: 25px;
-  }
-
-  label {
-    padding-right: 20px;
-  }
-  .pop-button button {
-    margin: 0;
-    width: 85px;
-    margin-right: 10px;
-    margin-left: 10px;
-  }
-
-}
-
-
-
